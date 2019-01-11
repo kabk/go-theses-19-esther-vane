@@ -359,6 +359,7 @@ div.symbol {
     float: none !important;
     font-size: 20px;
     background: none;
+    line-height: 1.3em;
   }
     .textWithImage{
     page-break-after:always !important;
@@ -381,6 +382,7 @@ div.symbol {
   em {
    font-style: italic;
    font-size: 20px;
+   line-height: 1.3em;
 }
 
   .header { 

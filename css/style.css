@@ -284,11 +284,12 @@ div.symbol {
 
 
 /*print print print print print print print print print print print print */
-@media print {
-    #Header, #Footer { display: none !important; }
-}
+
 .printImage{
   display:none;
+}
+@media print {
+    #Header, #Footer { display: none !important; }
 }
 
 @media print { 

@@ -1,0 +1,119 @@
+::-webkit-scrollbar {
+   display: none;
+}
+
+/*@media print { 
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    background: none;
+  }
+  #right_characters{
+    display:none;
+  }
+  .printImage {
+    display: block;
+    width: 100%;
+    max-height: 100%;
+    page-break-after:always;
+    page-break-before:always;
+  }
+  #story_text{
+    width: 100%;
+    margin: 0;
+    left: 0;
+  }
+}
+
+@page :left {
+margin: 0.5cm;
+}
+
+@page :right {
+margin: 0.8cm;
+}
+
+
+body {
+   margin: 0;
+   width: 100% height:100%;
+   font-family: 'Century Schoolbook'; 
+   font-size: 20pt;
+   line-height: 1.3em;
+   background-color: white;
+   background-image;
+   !important;
+   -webkit-print-color-adjust: exact;
+}
+
+#content,
+html,
+body {
+   height: 98%;
+}
+
+.header { display: none; }
+ 
+#story_text {
+ width: auto;
+ border: 0;
+ margin: 0 5%;
+ padding: 0;
+ float: none !important;
+ }
+
+ img{
+   width: 100%;
+ }
+
+#gradient_header { display: none; }
+}  
+
+
+.header a {
+   display: none;
+}
+
+#print-afbeeldingen{
+}
+
+
+#story_text{
+
+}
+
+#right_characters {
+   margin-bottom: 100%;
+   font-size: 10px;
+   font-family: 'Century Schoolbook'; 
+   border-left: 2px; 
+   font-style: italic;
+   line-height: 1.3em;
+   margin-bottom: 100%;
+   width: 50%;
+   height: 100%;
+   background-position: center center;
+   background-size: cover;
+   position: fixed;
+   background-image: url("../img/nelly.JPG");
+   top: 0px;
+   left: 50%;
+}
+
+.fact_text {
+   color: black;
+   width: 100%;
+   font-size: 17px;
+   color: black;
+   display: none;
+}
+
+em {
+   font-style: italic;
+}
+
+*/

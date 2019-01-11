@@ -1,16 +1,31 @@
-
-/*@font-face {
-  font-family: 'dotum';
-  src: url(font/dotum.tff); }
-
 @font-face {
-  font-family: AktivGrotesk;
-  src: url(font/AktivGrotesk.Light); }*/
+  font-family: "CenturySkool";
+  src: url("../font/CenturySchoolbookBT-Roman.otf");
+}
+@font-face {
+  font-family: "CenturySkool";
+  src: url("../font/CenturySchoolbookBT-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "CenturySkool";
+  src: url("../font/CenturySchoolbookBT-BoldItalic.otf");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "CenturySkool";
+  src: url("../font/CenturySchoolbookBT-Italic.otf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Unpronounceable";
+  src: url("../font/TheUnpronounceableAcademy-WhatsRegularAnyway.ttf");
+}
 
 html, body {
   width: 100%;
   height: 100%;
-  overflow: auto;
   padding-bottom: 0px;
   padding-right: 0px;
   padding-left: 0px;
@@ -24,132 +39,359 @@ html, body {
 body {
   font-variant-ligatures: common-ligatures;
   color: #000;
-  text-shadow: 0px 0px 6px rgba(0,0,0,0.12);
-  letter-spacing: 0.2px;
+  text-shadow: 0px 0px 7px rgba(0,0,0,0.13);
   margin: 0;
   padding: 0;
-  background-color: pink;
 }
 
-.titletext {
-  font-size: 20px;
-  font-family: 'Century Schoolbook';
-  letter-spacing: none;
-  position: fixed;
- /* right: 0.5rem;*/
-  left: 27rem;
-  bottom: 0.5rem;
-/*  position: fixed;*/
-  z-index: 1000;
+h1 {
+  font-family: 'CenturySkool';
+  font-size: 18px;
+  font-style: bold;
+}
 
-}   
-header {
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    outline: 0;
+}
+
+p {
+    color: black;
+    font-family: 'CenturySkool';
+    margin: 0 !important; 
+    hyphens: auto;
+/*    line-height: 1.4;*/
+    text-align: left;
+    text-indent: 3vw;
+}
+
+p#no-indent {
+    margin: 0 !important; 
+    color: black;
+    font-family: 'CenturySkool';
+    hyphens: auto;
+    text-align: left;
+    text-indent: 0;
+}
+
+
+em {
+  font-family: 'CenturySkool'; 
+  font-style: italic;
+/*  line-height: 1.4;*/
+}
+.unpronounceableSymbol {
+  font-family: 'Unpronounceable';
+}
+
+#handout{
+  font-family: 'CenturySkool';
+  font-size: 18px;
+  font-style: italic;
+/*  font-weight: bold;*/
+  width: 70%;
+  box-shadow:
+/*  border: solid 2px black;*/
+
+}
+
+.background {
+  width:100%;
+  margin-bottom: 100%;
+  width: 50%;
+  height: 100%;
+  background-position: center;
+  position: fixed;
+  /*background-color: red;*/
+  left: 50%;
+  z-index: 0;
+  background-repeat: no-repeat;
+
+}
+
+.main-image {
+  position: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+}
+
+#gradient_header {
+/*  opacity: 0.9;*/
   z-index: 9;
   top: 0;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  height: 7rem;
+  padding: 1rem;
+  background: linear-gradient(to bottom, white 20%, rgba(250, 250, 250, 0) 100%);
+  pointer-events: none; 
+
+}  
+
+.header {
+  z-index: 9;
+  top: 0;
+/*  position: relative;*/
   width: 100%;
   height: 7rem;
   padding: 0.5rem;
   font-size: 1rem;
-  font-family: 'Century Schoolbook'; }
-  header a {
-    text-decoration: none;
-    size: 2.3vw;
-    color: black; }
-  header .headerLink {
+  font-family: 'CenturySkool'; 
+  font-style: italic;
+}
+.header a {
+  text-decoration: none;
+  size: 2.3vw;
+  color: black; 
+}
+.header .headerLink {
     float: left;
     position: absolute;
-    text-align: center; }
-  header .headerLink:nth-child(1) {
-    left: 5rem; }
-  header .headerLink:nth-child(2) {
-    left: 20rem; }
-  header .headerLink:nth-child(3) {
-    right: 40rem; }
-  header .headerLink:nth-child(4) {
-    right: 25rem; }
-  header .headerLink:nth-child(5) {
-    right: 5rem; }
+    text-align: center; 
+  }
+.header .headerLink:nth-child(1) {
+left: 5%; }
+.header .headerLink:nth-child(2) {
+left: 20%; }
+.header .headerLink:nth-child(3) {
+left: 40%; }
+.header .headerLink:nth-child(4) {
+right: 40%; }
+.header .headerLink:nth-child(5) {
+right: 22%; }
+.header .headerLink:nth-child(6) {
+right: 5%; 
+}
+
+.headerLink a img {
+/*  width: 30%;
+  height: 30%;*/
 
 }
 
-
-#gradient_header {
-  opacity: 0;
-  z-index: 9;
-  top: 0;
-  position: fixed;
-  width: 100%;
-  height: 7rem;
-  padding: 0.5rem;
-  background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 100%);
-  pointer-events: none; }
-
-
-
-.story_text {
-  font-size: 19px;
-  width: 675px;
-  margin: 25px 70px auto;
+#story_text {
+  width: 47%;
+  margin: 45px 20px auto;
   margin-bottom: 40px;
-  font-family: 'Century Schoolbook';
-} 
-
-#story_text p {
-  margin-bottom: 35px;
-}
-  
-
-.indent {
-  text-indent: 60px;
-  display: block;
-}
-
-#right_characters {
+  font-family: 'CenturySkool';
   font-size: 18px;
-  font-family: 'Century Schoolbook';
-  text-shadow: none;
-  letter-spacing: none;
-  position: fixed;
-  z-index: 1000;
-  
-} 
+  line-height: 1.4em;
+  padding: 12px;
+  overflow-x: hidden;
+  letter-spacing: 0.1px;
+
+}
 
 #right_characters {
+  margin-bottom: 100%;
+  font-size: 18px;
+  font-family: 'CenturySkool';
+/*  font-style: italic;*/
+  border-left: 20px; 
+  line-height: 1.4em;
+  width: 50%;
+  height: 100%;
+  font-style: italic;
+  background-position: center center;
+  background-size: cover;
   position: fixed;
-  top: 50px;
-  left: 1200px;
+  background-image: url("../img/nelly.JPG");
+  /*background-color: red;*/
+  top: 0px;
+  left: 50%;
   z-index: 1;
-} 
+  -webkit-transition: background-image 0.5s ease-in-out;
+  transition: background-image 0.5s ease-in-out;
+}
 
-#right_characters img {
-  width:50%;
-}      
+ 
 
-.content {
-  height: 4Vw;
-  transition: height 0.5s ease 0.15s;
+.fact_text {
+/*  position: fixed;*/
+  position: absolute;
+  left: 0;
+  bottom: 0%;  
+  width: 100%;
+  background: linear-gradient(to top, white 40%, rgba(250, 250, 250, 0) 100%);
+/*  background-color: white;*/
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  overflow-x: hidden;
+/*  font-style: italic;*/
+/*  font-family: 'CenturySkool';*/
+
+}
+
+div.symbol {
+  text-align: center;
+  font-family: "Arnhem-Normal";
+  font-size: 22px;
+}
+
+.object_text{
+
+
+}
+
+/* content = hover, animating width text */
+.fact_text {
+  height: 3Vw;
+  transition: height 1s ease 0.15s;
   overflow: hidden;
 
 }
 
-.content:hover{ 
-  height:20vw;
+.fact_text:hover{ 
+  height: auto;
+  cursor: pointer;
 /*  background-color: blue;
 */
 }
 
-a:hover { 
+.logo {
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+}
 
-  font-family: 'Century Schoolbook';
-/*  font-size: 1vw;
-  line-height: 1vw;*/
-  font-weight: normal;
-  font-style: italic; 
+.logo svg {
+  width:100vw;
+  height:100vh;
+  margin: 0 auto;
+  display: block;
+}
+
+.headerLink a img:hover {
 }
 
 
-.headerLink a img:hover {
 
+
+
+
+
+
+
+
+/*print print print print print print print print print print print print */
+
+.printImage{
+  display:none;
+}
+
+@media print { 
+
+  @page {
+    size: A4;
+    margin: 0;
   }
+
+  @page :left {
+  margin: 0.5cm;
+  }
+
+  @page :right {
+  margin: 0.8cm;
+  }
+
+  body {
+   margin: 0;
+   width: 100% height:100%;
+   font-family: 'Century Schoolbook'; 
+   font-size: 20pt;
+   line-height: 1.3em;
+   background-color: white;
+   background-image;
+   !important;
+   -webkit-print-color-adjust: exact;
+  }
+
+  #right_characters{
+    display:none;
+  }
+
+  #content,
+    html,
+    body {
+       height: 100%;
+  }
+
+  .header { 
+    display: none; 
+  }
+
+  .printImage {
+    display: block;
+    width: 100%;
+    max-height: 100%;
+    page-break-after:always;
+    page-break-before:always;
+  }
+  #story_text{
+    width: auto;
+    border: 0;
+    margin: 0 5%;
+    padding: 0;
+    float: none !important;
+    font-size: 20px;
+    background: none;
+  }
+
+   img{
+   width: 100%;
+  }
+
+  .fact_text {
+   color: black;
+   width: 100%;
+   color: black;
+   display: none;
+   font-size: 20px;
+  }
+
+  em {
+   font-style: italic;
+   font-size: 20px;
+}
+
+  .header { 
+    display: none; 
+  }
+
+  .header a {
+   display: none;
+}
+
+  #gradient_header { display: none; }
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

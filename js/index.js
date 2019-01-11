@@ -9,20 +9,20 @@ var allChapters = $(".textWithImage"),
     // IT'S REALLY IMPORTANT THAT YOU HAVE THE SAME AMOUNT OF IMAGES IN THE ARRAY BELOW AS CHAPTERS (NOT MORE, NOT LESS), AND THAT THEY ARE IN THE CORRECT ORDER OTHERWISE THE CODE BREAKS
 
     allTheImages = [
-      "img/symbol_blur.png",
-      "img/symbol_blur.png",
+      "img/symbol5.png",
+      "img/symbol5.png",
       "img/anni.JPG",
       "img/john.jpeg",
-      "img/cedric.png",
+      "img/cedric2.png",
       "img/sekula.jpeg",
       "img/nelly.JPG",
-      "img/marina.png",
+      "img/marina2.png",
       "img/kens.jpg",
       "img/chantal.jpg",
       "img/sheila3.png",
       "img/fritz.JPG",
       "img/tania.JPG",
-      "img/symbol_image.png"
+      "img/symbol5.png"
     ],
     activeChapter = 0,
     mainImage = $('.main-image'),

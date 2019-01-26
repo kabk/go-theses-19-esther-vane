@@ -23,6 +23,12 @@
   src: url("../font/TheUnpronounceableAcademy-WhatsRegularAnyway.ttf");
 }
 
+@font-face {
+  font-family: "Stanley";
+  src: url("../font/Stanley-Regular.otf");
+}
+
+
 html, body {
   width: 100%;
   height: 100%;
@@ -56,12 +62,14 @@ h1 {
     margin: 0;
     border: 0;
     outline: 0;
+    font-size: 18px;
+    line-height: 1.4em;
 }
 
 p {
     color: black;
     font-family: 'CenturySkool';
-    margin: 0 !important; 
+    margin: 0 !important;
     hyphens: auto;
 /*    line-height: 1.4;*/
     text-align: left;
@@ -69,7 +77,7 @@ p {
 }
 
 p#no-indent {
-    margin: 0 !important; 
+    margin: 0 !important;
     color: black;
     font-family: 'CenturySkool';
     hyphens: auto;
@@ -79,7 +87,7 @@ p#no-indent {
 
 
 em {
-  font-family: 'CenturySkool'; 
+  font-family: 'CenturySkool';
   font-style: italic;
 /*  line-height: 1.4;*/
 }
@@ -88,14 +96,15 @@ em {
 }
 
 #handout{
-  font-family: 'CenturySkool';
-  font-size: 18px;
   font-style: italic;
-/*  font-weight: bold;*/
   width: 70%;
-  box-shadow:
-/*  border: solid 2px black;*/
+  margin-left: 5%;
+  margin-top: 1.4em;
+}
 
+.handoutParagraph {
+  text-indent: 0;
+  margin-bottom: 0.7em!important;
 }
 
 .background {
@@ -130,9 +139,9 @@ em {
   height: 7rem;
   padding: 1rem;
   background: linear-gradient(to bottom, white 20%, rgba(250, 250, 250, 0) 100%);
-  pointer-events: none; 
+  pointer-events: none;
 
-}  
+}
 
 .header {
   z-index: 9;
@@ -142,18 +151,18 @@ em {
   height: 7rem;
   padding: 0.5rem;
   font-size: 1rem;
-  font-family: 'CenturySkool'; 
+  font-family: 'CenturySkool';
   font-style: italic;
 }
 .header a {
   text-decoration: none;
   size: 2.3vw;
-  color: black; 
+  color: black;
 }
 .header .headerLink {
     float: left;
     position: absolute;
-    text-align: center; 
+    text-align: center;
   }
 .header .headerLink:nth-child(1) {
 left: 5%; }
@@ -166,13 +175,12 @@ right: 40%; }
 .header .headerLink:nth-child(5) {
 right: 22%; }
 .header .headerLink:nth-child(6) {
-right: 5%; 
+right: 5%;
 }
 
 .headerLink a img {
 /*  width: 30%;
   height: 30%;*/
-
 }
 
 #story_text {
@@ -180,8 +188,6 @@ right: 5%;
   margin: 45px 20px auto;
   margin-bottom: 40px;
   font-family: 'CenturySkool';
-  font-size: 18px;
-  line-height: 1.4em;
   padding: 12px;
   overflow-x: hidden;
   letter-spacing: 0.1px;
@@ -192,8 +198,7 @@ right: 5%;
   margin-bottom: 100%;
   font-size: 18px;
   font-family: 'CenturySkool';
-/*  font-style: italic;*/
-  border-left: 20px; 
+  border-left: 20px;
   line-height: 1.4em;
   width: 50%;
   height: 100%;
@@ -211,13 +216,13 @@ right: 5%;
 
 }
 
- 
+
 
 .fact_text {
 /*  position: fixed;*/
   position: absolute;
   left: 0;
-  bottom: 0%;  
+  bottom: 0%;
   width: 100%;
   background: linear-gradient(to top, white 40%, rgba(250, 250, 250, 0) 100%);
 /*  background-color: white;*/
@@ -232,8 +237,10 @@ right: 5%;
 
 div.symbol {
   text-align: center;
-  font-family: "Arnhem-Normal";
+  font-family: "Times";
   font-size: 22px;
+  font-style: none;
+
 }
 
 .object_text{
@@ -243,13 +250,16 @@ div.symbol {
 
 /* content = hover, animating width text */
 .fact_text {
-  height: 3Vw;
-  transition: height 1s ease 0.15s;
+  max-height: 3vw;
+  height: 3vw;
+  /* height: 18px; */
+  transition: max-height 1s ease;
   overflow: hidden;
 
 }
 
-.fact_text:hover{ 
+.fact_text:hover{
+  max-height: 100vh;
   height: auto;
   cursor: pointer;
 /*  background-color: blue;
@@ -276,7 +286,13 @@ div.symbol {
   display: none;
 }
 
+.thanks {
+  font-style: italic;
+}
 
+.titel {
+
+}
 
 
 
@@ -288,32 +304,35 @@ div.symbol {
 .printImage{
   display:none;
 }
+
 @media print {
     #Header, #Footer { display: none !important; }
 }
 
-@media print { 
+@media print {
 
   @page {
     size: A4;
-    margin: 0;
+    /*margin-top: 1.5cm;*/
 
   }
 
-  @page :left {
-  margin: 0.5cm;
-  }
 
-  @page :right {
-  margin: 0.8cm;
-  }
+/*      @page :left {
+      margin: 1.5cm;
+      }
+
+      @page :right {
+      margin: 1.8cm;
+      }*/
+
 
   body {
    margin: 0;
    width: 100% height:100%;
-   font-family: 'Century Schoolbook'; 
-   font-size: 20pt;
-   line-height: 1.3em;
+   font-family: 'Century Schoolbook';
+   font-size: 17pt;
+   line-height: 1.2em;
    background-color: white;
    background-image;
    !important;
@@ -324,20 +343,14 @@ div.symbol {
     display:none;
   }
 
-  #content,
-    html,
-    body {
-       height: 100%;
-  }
-
-  .header { 
-    display: none; 
+  .header {
+    display: none;
   }
 
   .printImage {
     display: block;
     width: 100%;
-    max-height: 110%;
+    /*max-height: 100%;*/
     page-break-after:always !important;
     page-break-before:always;
   }
@@ -345,7 +358,8 @@ div.symbol {
   .printLogo {
     display: block;
     width: 100%;
-    max-height: 100%;
+    max-height: auto;
+    padding-top: 1.5cm;
     page-break-after:always !important;
     page-break-before:always;
     float:right;margin-left:20px
@@ -357,18 +371,24 @@ div.symbol {
     margin: 0 5%;
     padding: 0;
     float: none !important;
-    font-size: 20px;
+    font-size: 17px;
     background: none;
-    line-height: 1.3em;
+    line-height: 1.2em;
   }
-    .textWithImage{
+  .textWithImage{
     page-break-after:always !important;
     page-break-before:always;
-}
+    margin-left: 1.5cm;
+    margin-right: 1.5cm;
+    padding-top: 1.5cm;
+    margin-bottom: 1.5cm;
+  }
 
-   img{
+   img.printImage{
    width: 100%;
    height: auto;
+   padding-top: 1.2cm;
+
   }
 
   .fact_text {
@@ -379,14 +399,27 @@ div.symbol {
    font-size: 20px;
   }
 
+  .thanks {
+    page-break-before: always;
+    padding-top: 1.5cm;
+    font-style: none;
+  }
+
+  #thanks {
+    page-break-before: always;
+    padding-top: 1.5cm;
+    font-style: none;
+
+  }
+
   em {
    font-style: italic;
-   font-size: 20px;
-   line-height: 1.3em;
+   font-size: 17px;
+   line-height: 1.2em;
 }
 
-  .header { 
-    display: none; 
+  .header {
+    display: none;
   }
 
   .header a {
@@ -394,28 +427,16 @@ div.symbol {
 }
 
   #gradient_header { display: none; }
-}  
 
+.pagebreak{
+  page-break-before: always;
+  padding-top: 1.5cm;
 
+}
 
+/*p {
+  page-break-after: always;
+}*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*end*/
+}

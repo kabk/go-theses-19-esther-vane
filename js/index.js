@@ -16,7 +16,7 @@ var allChapters = $(".textWithImage"),
       "img/cedric2.png",
       "img/sekula.jpeg",
       "img/nelly.JPG",
-      "img/marina2.png",
+      "img/marina.png",
       "img/kens.jpg",
       "img/chantal.jpg",
       "img/sheila3.png",
@@ -63,7 +63,7 @@ function replaceImageAndText(){
 
 // this is the function to get the texts
 function getTheCaptions() {
-  for (var i = allTheCaptionContainers.length - 1; i >= 0; i--) {
+  for (var i = 0; i < allTheCaptionContainers.length; i++) {
     allTheCaptions.push( $( allTheCaptionContainers[i] ).html() );
   }
   // console.log(allTheCaptionContainers);
